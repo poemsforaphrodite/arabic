@@ -81,7 +81,7 @@ CUDA_VISIBLE_DEVICES=0 python train_gpt_xtts.py \
 --max_audio_length 330750 \
 --weight_decay 1e-2 \
 --lr 5e-6 \
---save_step 50000
+--save_step 500
 ```
 
 ## 7. Usage Example
