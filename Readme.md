@@ -5,9 +5,8 @@
 2. [Data Preparation](#2-data-preparation)
 3. [Pretrained Model Download](#3-pretrained-model-download)
 4. [Vocabulary Extension and Configuration Adjustment](#4-vocabulary-extension-and-configuration-adjustment)
-5. [DVAE Finetuning (Optional)](#5-dvae-finetuning-optional)
-6. [GPT Finetuning](#6-gpt-finetuning)
-7. [Usage Example](#7-usage-example)
+5. [GPT Finetuning](#6-gpt-finetuning)
+6. [Usage Example](#7-usage-example)
 
 ## 1. Installation
 
@@ -29,12 +28,14 @@ project_root/
 │   ├── wavs/
 │   │   ├── ARA NORM  0002.wav
 │   │   ├── ARA NORM 0001.wav
-│   │   ├── zzz.wav
+│   │   ├── ARA NORM 0003.wav
 │   │   └── ...
 │   ├── metadata_train.csv
 │   ├── metadata_eval.csv
 ...
 │   
+|__ train_gpt_xtts.py
+|__ inference.py
 ├── TTS/
 └── README.md
 ```
@@ -69,7 +70,6 @@ python extend_vocab_config.py --output_path=checkpoints/ --metadata_path dataset
 
 For GPT finetuning, execute:
 
-[OUTDATED]
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train_gpt_xtts.py \
 --output_path checkpoints/ \
@@ -102,7 +102,7 @@ device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 # Model paths (You need to change the paths)
 xtts_checkpoint = "checkpoints/GPT_XTTS_FT-January-1-2025_08+19AM-6a6b942/best_model_99875.pth"
-xtts_config = "checkpoints/GPT_XTTS_FT-August-30-2024_08+19AM-6a6b942/config.json"
+xtts_config = "checkpoints/GPT_XTTS_FT-January-1-2025_08+19AM-6a6b942/config.json"
 xtts_vocab = "checkpoints/XTTS_v2.0_original_model_files/vocab.json"
 
 # Load model

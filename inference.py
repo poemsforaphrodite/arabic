@@ -12,7 +12,7 @@ device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 # Model paths (You need to change the paths)
 xtts_checkpoint = "checkpoints/GPT_XTTS_FT-January-1-2025_08+19AM-6a6b942/best_model_99875.pth"
-xtts_config = "checkpoints/GPT_XTTS_FT-August-30-2024_08+19AM-6a6b942/config.json"
+xtts_config = "checkpoints/GPT_XTTS_FT-January-1-2025_08+19AM-6a6b942/config.json"
 xtts_vocab = "checkpoints/XTTS_v2.0_original_model_files/vocab.json"
 
 # Load model
