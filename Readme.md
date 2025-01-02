@@ -84,7 +84,7 @@ CUDA_VISIBLE_DEVICES=0 python train_gpt_xtts.py \
 --save_step 500
 ```
 
-## 7. Usage Example
+## 6. Usage Example
 
 Here's a sample code snippet demonstrating how to use the finetuned model:
 
